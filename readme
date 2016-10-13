@@ -83,3 +83,33 @@ Deprecated in favor of sshplus.py
 
 A sshmenu like alternative for appindicator menu, which supports sshmenu configuration file, thus becoming a drop in replacement on Ubuntu's unity launcher.
 
+	v1.1 Release notes: rnijenhu: Compartible with previous version but it will also 
+	check /etc/sshplus/sshplus.cfg for more menus, 
+	with this cfg file following options/functions becomes available as well:
+		+ Support for multiple (global) menu files, just create 
+			/etc/sshplus/sshplus.cfg (or a link to the network version)
+		+ Simpel access control, which user is able too see the menu
+		+ CLI option to install sshplus in the sys or user startup folder
+		+ Support for icons before label/folder/task items
+		+ Added a 'recently used' menu with auto refresh
+		+ customizable text and icon for the indicator
+		+ command availibility checking, if not within PATH the icon 
+			displays an error (command not blocked). 
+			Usefull when you got an application installed on several machines 
+			but not on all
+		+ folder IP checking, before a menu is available a specified IP 
+			must be reachable. Especially for (local) ssh calls to machines 
+			that are only available when a VPN is connected. A refresh after 
+			setting up the connection will make the menu available.  
+			This is (a little) time consuming, 
+			use it wisely (and is it implemeted for folders only).
+		+ Support for env vars in the config files
+		+ menu files can be read from json as well, for humans I would recommend 
+			the previous file format
+
+ 		sample files are provided in the subfolder 'sshplus'
+
+
+
+
+
